@@ -99,6 +99,11 @@
 
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+  .plink { color: inherit; text-decoration: none; }
+  .plink:hover { color: var(--accent); text-decoration: none; }
+  .plink::after { content: "↗"; font-size: .62em; color: var(--ink-faint); margin-left: 3px;
+    vertical-align: super; font-weight: 600; }
+  .plink:hover::after { color: var(--accent); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
 
   /* ---- header ---- */
@@ -291,7 +296,7 @@
 
         <div class="proj">
           <div class="top">
-            <h3>Nucleus <span style="color:var(--accent-2);font-size:11px;font-weight:700;vertical-align:middle">— FRAMEWORK</span></h3>
+            <h3><a class="plink" href="https://github.com/NucleusFramework/Nucleus">Nucleus</a> <span style="color:var(--accent-2);font-size:11px;font-weight:700;vertical-align:middle">— FRAMEWORK</span></h3>
             <span class="metric"><b>★ 304</b> · v2.0 · Maven Central</span>
           </div>
           <div class="headline">The native desktop platform for the JVM</div>
@@ -312,7 +317,7 @@
 
         <div class="proj">
           <div class="top">
-            <h3>ComposeMediaPlayer</h3>
+            <h3><a class="plink" href="https://github.com/kdroidFilter/ComposeMediaPlayer">ComposeMediaPlayer</a></h3>
             <span class="metric"><b>★ 475</b></span>
           </div>
           <div class="headline">The only Compose player on native codecs — no VLC, no MPV</div>
@@ -327,7 +332,7 @@
 
         <div class="proj">
           <div class="top">
-            <h3>ComposeNativeTray</h3>
+            <h3><a class="plink" href="https://github.com/NucleusFramework/ComposeNativeTray">ComposeNativeTray</a></h3>
             <span class="metric"><b>★ 398</b></span>
           </div>
           <div class="headline">A true native system tray — not AWT, not emulated</div>
@@ -341,16 +346,16 @@
 
       <section>
         <h2>Selected Open-Source Libraries</h2>
-        <div class="lib"><span class="name">ComposeNativeWebview</span>
+        <div class="lib"><span class="name"><a class="plink" href="https://github.com/kdroidFilter/ComposeNativeWebview">ComposeNativeWebview</a></span>
           <span class="m">★ 162</span>
           <span class="desc">OS-native WebView (WKWebView / WebView2 / WebKitGTK) via Wry + UniFFI — no Chromium, 90% smaller binaries.</span></div>
-        <div class="lib"><span class="name">ComposePdfReader</span>
+        <div class="lib"><span class="name"><a class="plink" href="https://github.com/NucleusFramework/ComposePdfReader">ComposePdfReader</a></span>
           <span class="m">★ 59</span>
           <span class="desc">KMP PDF rendering &amp; text extraction on pdfium — Compose-first API with progressive rendering &amp; selectable text.</span></div>
-        <div class="lib"><span class="name">DesktopAccessibilityManager</span>
+        <div class="lib"><span class="name"><a class="plink" href="https://github.com/kdroidFilter/DesktopAccessibilityManager">DesktopAccessibilityManager</a></span>
           <span class="m">ETH&nbsp;Zürich</span>
           <span class="desc">Brings <code>announceForAccessibility()</code> to Compose Desktop via JNA — bridges NVDA, JAWS, VoiceOver.</span></div>
-        <div class="lib"><span class="name">AudioKt</span>
+        <div class="lib"><span class="name"><a class="plink" href="https://github.com/NucleusFramework/AudioKt">AudioKt</a></span>
           <span class="m">Rust</span>
           <span class="desc">JVM audio engine wrapping Rust’s Rodio — local files, HLS, internet radio with ICY metadata.</span></div>
       </section>
@@ -358,7 +363,7 @@
       <section>
         <h2>Applications &amp; Systems</h2>
         <div class="proj" style="padding-top:0">
-          <div class="top"><h3>Zayit</h3><span class="metric">4,200+ downloads</span></div>
+          <div class="top"><h3><a class="plink" href="https://github.com/kdroidFilter/Zayit">Zayit</a></h3><span class="metric">4,200+ downloads</span></div>
           <div class="headline">Semantic search over 7,000+ Jewish texts — fully offline</div>
           <p>Production KMP app for reading and searching the Jewish textual library: Hebrew-aware
             tokenization, full-text indexing, citation-aware navigation on SQLite. Powered by Sefaria.</p>
