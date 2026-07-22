@@ -74,10 +74,24 @@
     :root { --ground: #fff; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .page { max-width: none; padding: 0; }
-    body { font-size: 12px; }
+    body { font-size: 10.2px; line-height: 1.36; }
+    .name { font-size: 26px; letter-spacing: .5px; }
+    .title { font-size: 12px; margin-top: 3px; }
+    .meta { font-size: 10.2px; line-height: 1.5; margin-top: 6px; }
+    .rule { margin-top: 9px; }
+    section { margin-top: 9px; }
+    h2 { font-size: 10.5px; margin-bottom: 5px; padding-bottom: 3px; }
+    .summary { font-size: 10.2px; line-height: 1.4; }
+    .entry { margin-bottom: 6px; }
+    .entry .role { font-size: 11px; }
+    .entry .org, .entry .date { font-size: 10px; }
+    ul { margin-top: 2px; padding-left: 15px; }
+    li { font-size: 10.2px; line-height: 1.36; margin-bottom: 1px; }
+    .skills { font-size: 10.2px; gap: 3px 12px; grid-template-columns: 118px 1fr; }
+    .langs { font-size: 10.2px; }
     section, .entry { break-inside: avoid; }
     h2 { break-after: avoid; }
-    @page { margin: 14mm; }
+    @page { margin: 11mm; }
   }
 </style>
 </head>
@@ -150,19 +164,10 @@
   </section>
 
   <section>
-    <h2>Languages</h2>
-    <div class="langs">
-      <div><b>French</b><span>Native</span></div>
-      <div><b>English</b><span>Full professional</span></div>
-      <div><b>Hebrew</b><span>Professional</span></div>
-    </div>
-  </section>
-
-  <section>
     <h2>Computer Skills</h2>
     <dl class="skills">
       <dt>Languages</dt><dd>Kotlin, Rust, C++, Go, Python, TypeScript</dd>
-      <dt>Frameworks</dt><dd>Compose Multiplatform, Kotlin Multiplatform (KMP), React</dd>
+      <dt>Frameworks</dt><dd>Compose Multiplatform, Kotlin Multiplatform (KMP)</dd>
       <dt>Native bridging</dt><dd>JNI, Java FFM, JNA, UniFFI, GraalVM native image</dd>
       <dt>Platform APIs</dt><dd>Win32 / WinRT, AppKit / AVFoundation, D-Bus, MediaFoundation, GStreamer</dd>
       <dt>Build &amp; delivery</dt><dd>Gradle plugin development, GitHub Actions, code signing, notarization, installers, auto-update</dd>
