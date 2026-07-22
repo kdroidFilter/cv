@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Elie Gambache — Software Engineer, Kotlin Multiplatform & Native Desktop. CV." />
+<title>Elie Gambache — CV</title>
+<style>
+  :root {
+    --ground: #ffffff; --ink: #16191E; --soft: #4A545F; --faint: #7A838D;
+    --accent: #1E3A5F; --hairline: #D7DDE3; --todo-bg: #FFF4D6; --todo-ink: #8A5A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ground: #0C0F13; --ink: #E7ECF1; --soft: #A9B3BD; --faint: #77828C;
+      --accent: #7FB0E8; --hairline: rgba(255,255,255,.12); --todo-bg: #2A2410; --todo-ink: #E6C77A; }
+  }
+  :root[data-theme="light"] { --ground:#fff; --ink:#16191E; --soft:#4A545F; --faint:#7A838D;
+    --accent:#1E3A5F; --hairline:#D7DDE3; --todo-bg:#FFF4D6; --todo-ink:#8A5A00; }
+  :root[data-theme="dark"] { --ground:#0C0F13; --ink:#E7ECF1; --soft:#A9B3BD; --faint:#77828C;
+    --accent:#7FB0E8; --hairline:rgba(255,255,255,.12); --todo-bg:#2A2410; --todo-ink:#E6C77A; }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink);
+    font-family: "Helvetica Neue", Arial, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.5; font-size: 14px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 800px; margin: 0 auto; padding: 46px 52px 56px; }
+
+  /* header */
+  .name { font-size: 34px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+    margin: 0; color: var(--ink); }
+  .title { margin: 4px 0 0; font-size: 15px; font-weight: 600; color: var(--accent);
+    letter-spacing: .3px; }
+  .meta { margin: 12px 0 0; font-size: 13px; color: var(--soft); line-height: 1.7; }
+  .meta a { color: var(--soft); text-decoration: none; }
+  .meta a:hover { color: var(--accent); text-decoration: underline; }
+  .meta .sep { color: var(--faint); margin: 0 8px; }
+  .rule { height: 2px; background: var(--accent); margin: 16px 0 0; border: 0; }
+
+  /* sections */
+  section { margin-top: 22px; }
+  h2 { font-size: 13px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid var(--hairline); }
+  p { margin: 0; }
+  .summary { color: var(--soft); font-size: 13.5px; line-height: 1.6; }
+
+  .entry { margin-bottom: 14px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry .line { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .entry .role { font-weight: 700; font-size: 14.5px; }
+  .entry .org { font-style: italic; color: var(--soft); font-size: 13.5px; }
+  .entry .date { font-weight: 700; font-size: 12.5px; color: var(--ink); white-space: nowrap;
+    font-variant-numeric: tabular-nums; }
+  ul { margin: 6px 0 0; padding-left: 18px; }
+  li { font-size: 13.5px; color: var(--soft); line-height: 1.55; margin-bottom: 3px; }
+  li b { color: var(--ink); font-weight: 650; }
+  .ka { font-weight: 700; color: var(--accent); }
+  a.link { color: var(--accent); text-decoration: none; }
+  a.link:hover { text-decoration: underline; }
+
+  /* two-line skills grid */
+  .skills { display: grid; grid-template-columns: 130px 1fr; gap: 5px 14px; font-size: 13.5px; }
+  .skills dt { font-weight: 700; color: var(--ink); }
+  .skills dd { margin: 0; color: var(--soft); }
+  .langs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 13.5px; }
+  .langs b { display: block; color: var(--ink); }
+  .langs span { color: var(--soft); }
+
+  .todo { background: var(--todo-bg); color: var(--todo-ink); font-weight: 600;
+    padding: 1px 6px; border-radius: 4px; font-size: 12.5px; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media print {
+    :root { --ground: #fff; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .page { max-width: none; padding: 0; }
+    body { font-size: 12px; }
+    section, .entry { break-inside: avoid; }
+    h2 { break-after: avoid; }
+    @page { margin: 14mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1 class="name">Elie Gambache</h1>
+    <p class="title">Software Engineer — Kotlin Multiplatform &amp; Native Desktop Systems</p>
+    <p class="meta">
+      Jerusalem, Israel <span class="sep">·</span> <a href="mailto:elyahou.hadass@gmail.com">elyahou.hadass@gmail.com</a>
+      <span class="sep">·</span> <span class="todo">Mobile: [envoie-moi le numéro]</span><br>
+      <a href="https://github.com/kdroidFilter">github.com/kdroidFilter</a>
+      <span class="sep">·</span> <a href="https://eliegambache.kdroidfilter.com">eliegambache.kdroidfilter.com</a>
+      <span class="sep">·</span> <a href="https://nucleusframework.dev">nucleusframework.dev</a>
+    </p>
+    <hr class="rule">
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Open-source software engineer and systems architect specializing in Kotlin Multiplatform and
+      native desktop development. Creator of <b>Nucleus</b>, the native desktop platform for the JVM,
+      and author of 30+ open-source libraries (2,900+ combined GitHub stars) trusted by JetBrains and
+      ETH Zürich and shipping in apps with 280K+ downloads. Expert at wrapping low-level OS APIs in
+      clean Kotlin and bridging Rust, C++ and Go into the JVM.
+    </p>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="entry">
+      <div class="line">
+        <span><span class="role">Founder &amp; Lead Open-Source Engineer</span> — <span class="org">KdroidFilter / NucleusFramework, Jerusalem</span></span>
+        <span class="date">2023 – Present</span>
+      </div>
+      <ul>
+        <li>Created <b>Nucleus</b> — the native desktop platform for the JVM: a Gradle-plugin framework (30+ modules, published to Maven Central) delivering native windows, OS integration, code signing and installers from a single DSL, on GraalVM native image or the JVM.</li>
+        <li>Authored <b>30+ open-source Kotlin Multiplatform libraries</b> for the Compose ecosystem — native media playback, system tray, WebView, notifications, accessibility and more.</li>
+        <li><span class="ka">Key Achievement:</span> libraries received open-source support from <b>JetBrains</b>, were <b>sponsored by ETH Zürich</b>, and now ship in production apps totalling <b>280,000+ downloads</b> (Pushscroll, AeroDL, AB Download Manager — 12K★).</li>
+        <li><span class="ka">Key Achievement:</span> ranked <b>#6 GitHub committer in Israel</b> (committers.top) with 2,900+ stars earned across personal and organization repositories.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Projects</h2>
+    <div class="entry">
+      <div class="line"><span class="role"><a class="link" href="https://github.com/NucleusFramework/Nucleus">Nucleus</a></span><span class="date">★ 304 · Maven Central</span></div>
+      <ul><li>Native desktop platform for the JVM — Compose Multiplatform + native window decorations, OS integration, code signing, notarization; ~0.5&nbsp;s cold start, 60&nbsp;MB RAM; signed installers in 16 formats from a git tag.</li></ul>
+    </div>
+    <div class="entry">
+      <div class="line"><span class="role"><a class="link" href="https://github.com/kdroidFilter/ComposeMediaPlayer">ComposeMediaPlayer</a></span><span class="date">★ 475</span></div>
+      <ul><li>The only Compose media player using native OS codecs (MediaFoundation, AVPlayer, GStreamer, ExoPlayer) — no VLC/MPV, zero external dependencies. Supported by JetBrains; used by Pushscroll (280K+).</li></ul>
+    </div>
+    <div class="entry">
+      <div class="line"><span class="role"><a class="link" href="https://github.com/NucleusFramework/ComposeNativeTray">ComposeNativeTray</a></span><span class="date">★ 398</span></div>
+      <ul><li>True native system tray for Compose Desktop (Go + D-Bus, C++, native macOS). Sponsored by ETH Zürich; used by AB Download Manager (12K★).</li></ul>
+    </div>
+    <div class="entry">
+      <div class="line"><span class="role"><a class="link" href="https://github.com/kdroidFilter/Zayit">Zayit</a></span><span class="date">4,200+ downloads</span></div>
+      <ul><li>Production KMP app: semantic, fully-offline search over 7,000+ Jewish texts — Hebrew-aware tokenization, full-text indexing, citation-aware navigation on SQLite. Powered by Sefaria.</li></ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p class="summary">Self-taught software engineer — expertise built entirely through open-source practice, shipping production libraries and applications adopted across the industry.</p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <div class="langs">
+      <div><b>French</b><span>Native</span></div>
+      <div><b>English</b><span>Full professional</span></div>
+      <div><b>Hebrew</b><span>Professional</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Computer Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Kotlin, Rust, C++, Go, Python, TypeScript</dd>
+      <dt>Frameworks</dt><dd>Compose Multiplatform, Kotlin Multiplatform (KMP), React</dd>
+      <dt>Native bridging</dt><dd>JNI, Java FFM, JNA, UniFFI, GraalVM native image</dd>
+      <dt>Platform APIs</dt><dd>Win32 / WinRT, AppKit / AVFoundation, D-Bus, MediaFoundation, GStreamer</dd>
+      <dt>Build &amp; delivery</dt><dd>Gradle plugin development, GitHub Actions, code signing, notarization, installers, auto-update</dd>
+      <dt>Domains</dt><dd>Android MDM &amp; enterprise mobility, search engines &amp; data pipelines, Hebrew NLP</dd>
+    </dl>
+  </section>
+
+
+</div>
+</body>
+</html>
