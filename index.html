@@ -3,39 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Elie Gambache (kdroidFilter) — Kotlin Multiplatform library creator & systems architect, creator of Nucleus." />
+<meta name="description" content="Elie Gambache (kdroidFilter) — creator of Nucleus, the native desktop platform for the JVM. Kotlin Multiplatform library creator & systems architect." />
 <title>Elie Gambache — CV</title>
-</head>
-<body>
 <style>
   :root {
-    /* Light — print-first ground */
-    --ground: #FBFCFE;
-    --surface: #F1F5F9;
-    --surface-2: #E9EFF4;
-    --ink: #0E1620;
-    --ink-soft: #43525F;
-    --ink-faint: #7C8B98;
-    --hairline: #DCE4EC;
-    --accent: #0284A8;      /* deepened cyan — legible on white */
-    --accent-2: #6D28B8;    /* violet */
-    --accent-soft: rgba(2,132,168,0.10);
-    --good: #0E7A5F;
+    --ground: #FBFCFE; --surface: #F1F5F9; --surface-2: #E9EFF4;
+    --ink: #0E1620; --ink-soft: #43525F; --ink-faint: #7C8B98;
+    --hairline: #DCE4EC; --accent: #0284A8; --accent-2: #6D28B8;
+    --accent-soft: rgba(2,132,168,0.10); --good: #0E7A5F;
     --shadow: 0 1px 2px rgba(14,22,32,.05), 0 8px 24px rgba(14,22,32,.05);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground: #08080C;
-      --surface: #0F0F1A;
-      --surface-2: #14141F;
-      --ink: #E9EEF3;
-      --ink-soft: #9FAcB8;
-      --ink-faint: #71808D;
-      --hairline: rgba(255,255,255,.09);
-      --accent: #22D3EE;
-      --accent-2: #A855F7;
-      --accent-soft: rgba(34,211,238,0.12);
-      --good: #34D399;
+      --ground: #08080C; --surface: #0F0F1A; --surface-2: #14141F;
+      --ink: #E9EEF3; --ink-soft: #9FACB8; --ink-faint: #71808D;
+      --hairline: rgba(255,255,255,.09); --accent: #22D3EE; --accent-2: #A855F7;
+      --accent-soft: rgba(34,211,238,0.12); --good: #34D399;
       --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
     }
   }
@@ -48,276 +31,200 @@
   }
   :root[data-theme="dark"] {
     --ground: #08080C; --surface: #0F0F1A; --surface-2: #14141F;
-    --ink: #E9EEF3; --ink-soft: #9FAcB8; --ink-faint: #71808D;
+    --ink: #E9EEF3; --ink-soft: #9FACB8; --ink-faint: #71808D;
     --hairline: rgba(255,255,255,.09); --accent: #22D3EE; --accent-2: #A855F7;
     --accent-soft: rgba(34,211,238,0.12); --good: #34D399;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
   }
 
   * { box-sizing: border-box; }
-
-
   body {
-    margin: 0;
-    background: var(--ground);
-    color: var(--ink);
+    margin: 0; background: var(--ground); color: var(--ink);
     font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
   }
+  .page { max-width: 920px; margin: 0 auto; padding: 48px 44px 56px; }
 
-  .page {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 56px 44px 72px;
-  }
-
-  /* ---- typography scale ---- */
   .mono { font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
   .eyebrow {
     font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
     color: var(--accent); margin: 0;
   }
-  h1 {
-    font-size: clamp(34px, 6vw, 52px);
-    line-height: 1.02; font-weight: 800; letter-spacing: -0.03em;
-    margin: 10px 0 0; text-wrap: balance;
-  }
-  .role {
-    margin: 12px 0 0; font-size: 16px; font-weight: 600; color: var(--ink-soft);
-    letter-spacing: -0.01em;
-  }
-  .role b { color: var(--accent-2); font-weight: 700; }
-  h2 {
-    font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--ink); margin: 0 0 16px; display: flex; align-items: center; gap: 12px;
-  }
+  h1 { font-size: clamp(38px, 6vw, 56px); line-height: 1; font-weight: 800;
+    letter-spacing: -0.035em; margin: 8px 0 0; }
+  .punch { font-size: clamp(20px, 3.2vw, 27px); font-weight: 750; letter-spacing: -0.02em;
+    line-height: 1.18; margin: 16px 0 0; max-width: 20ch; text-wrap: balance; }
+  .punch .g { background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .sub { margin: 12px 0 0; font-size: 14.5px; color: var(--ink-soft); max-width: 62ch; line-height: 1.55; }
+  .sub b { color: var(--ink); font-weight: 650; }
+
+  h2 { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--ink); margin: 0 0 14px; display: flex; align-items: center; gap: 12px; }
   h2::after { content: ""; flex: 1; height: 1px; background: var(--hairline); }
   h3 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
 
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .plink { color: inherit; text-decoration: none; }
-  .plink:hover { color: var(--accent); text-decoration: none; }
-  .plink::after { content: "↗"; font-size: .62em; color: var(--ink-faint); margin-left: 3px;
+  .plink:hover { color: var(--accent); }
+  .plink::after { content: "↗"; font-size: .6em; color: var(--ink-faint); margin-left: 3px;
     vertical-align: super; font-weight: 600; }
   .plink:hover::after { color: var(--accent); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
 
-  /* ---- header ---- */
-  header { display: flex; gap: 32px; align-items: flex-start; justify-content: space-between; }
-  .id { min-width: 0; }
-  .tagline {
-    margin: 18px 0 0; font-size: 15.5px; color: var(--ink-soft); max-width: 60ch;
-    line-height: 1.6;
-  }
-  .tagline .hl { color: var(--ink); font-weight: 600; }
-
-  .photo {
-    flex: 0 0 auto; width: 118px; height: 118px; border-radius: 50%;
-    padding: 3px; background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: var(--shadow);
-  }
-  .photo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;
-    border: 3px solid var(--ground); }
-
-  .contact {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
-  }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
   .contact a, .contact span {
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 12px; color: var(--ink-soft);
-    background: var(--surface); border: 1px solid var(--hairline);
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 12px;
+    color: var(--ink-soft); background: var(--surface); border: 1px solid var(--hairline);
     padding: 5px 11px; border-radius: 999px; white-space: nowrap;
   }
   .contact a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
   .contact .dot { color: var(--accent); }
 
-  /* ---- stat strip ---- */
-  .stats {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-    background: var(--hairline); border: 1px solid var(--hairline); border-radius: 12px;
-    overflow: hidden; margin: 34px 0 40px;
-  }
-  .stat { background: var(--surface); padding: 16px 18px; }
-  .stat .n {
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 24px; font-weight: 700; color: var(--ink);
-    font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  }
-  .stat .l { font-size: 11px; color: var(--ink-faint); margin-top: 3px; letter-spacing: .02em; }
+  /* ---- HOOK: the 2-second grab ---- */
+  .hook { margin: 26px 0 8px; }
+  .nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--hairline); border: 1px solid var(--hairline); border-radius: 14px; overflow: hidden; }
+  .cell { background: var(--surface); padding: 16px 20px; }
+  .cell .n { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 30px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;
+    line-height: 1; background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .cell .c { font-size: 11.5px; color: var(--ink-faint); margin-top: 6px; line-height: 1.35; }
+  .trust { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin-top: 14px; }
+  .trust .lbl { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-2);
+    font-weight: 600; margin-right: 2px; }
+  .trust .chip { font-size: 12.5px; font-weight: 650; color: var(--ink);
+    border: 1px solid var(--hairline); background: var(--accent-soft);
+    padding: 4px 10px; border-radius: 8px; }
+  .trust .chip small { color: var(--ink-faint); font-weight: 500; }
 
-  /* ---- body grid ---- */
-  .grid { display: grid; grid-template-columns: 1.75fr 1fr; gap: 44px; }
-  section { margin-bottom: 34px; }
-  .col-side section:last-child, .col-main section:last-child { margin-bottom: 0; }
+  .grid { display: grid; grid-template-columns: 1.7fr 1fr; gap: 40px; margin-top: 30px; }
+  section { margin-bottom: 26px; }
+  .col-main section:last-child, .col-side section:last-child { margin-bottom: 0; }
 
-  /* flagship cards */
-  .proj { padding: 18px 0; border-top: 1px solid var(--hairline); }
+  .proj { padding: 14px 0; border-top: 1px solid var(--hairline); }
   .proj:first-of-type { border-top: 0; padding-top: 0; }
   .proj .top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-  .proj .headline { font-size: 12.5px; color: var(--accent); font-weight: 600; margin: 3px 0 8px;
+  .proj .headline { font-size: 12.5px; color: var(--accent); font-weight: 600; margin: 3px 0 6px;
     font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; letter-spacing: -0.01em; }
-  .proj p { margin: 0; font-size: 13.5px; color: var(--ink-soft); line-height: 1.62; }
-  .metric {
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 12px; font-weight: 600; color: var(--ink-faint);
-    white-space: nowrap; font-variant-numeric: tabular-nums;
-  }
+  .proj p { margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+  .metric { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 12px;
+    font-weight: 600; color: var(--ink-faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .metric b { color: var(--accent-2); }
-  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
-  .badge {
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 10.5px; color: var(--ink-soft);
-    background: var(--accent-soft); border: 1px solid transparent;
-    padding: 3px 8px; border-radius: 6px;
-  }
-  .usedby { margin-top: 10px; font-size: 12px; color: var(--ink-faint); }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+  .badge { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 10.5px;
+    color: var(--ink-soft); background: var(--accent-soft); padding: 3px 8px; border-radius: 6px; }
+  .usedby { margin-top: 8px; font-size: 12px; color: var(--ink-faint); }
   .usedby b { color: var(--good); font-weight: 600; }
 
-  /* compact library list */
-  .lib { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 12px;
-    padding: 11px 0; border-top: 1px solid var(--hairline); align-items: baseline; }
-  .lib:first-of-type { border-top: 0; }
-  .lib .name { font-weight: 700; font-size: 14px; }
-  .lib .desc { grid-column: 2 / 4; font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
-  .lib .m { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 11.5px;
-    color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+  .lib { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px;
+    padding: 9px 0; border-top: 1px solid var(--hairline); align-items: baseline; }
+  .lib:first-of-type { border-top: 0; padding-top: 2px; }
+  .lib .name { font-weight: 700; font-size: 13.5px; }
+  .lib .m { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 11px;
+    color: var(--ink-faint); white-space: nowrap; }
+  .lib .desc { grid-column: 1 / 3; font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; }
 
-  /* sidebar */
-  .col-side h2 { font-size: 12px; }
-  .stack-group { margin-bottom: 15px; }
-  .stack-group .k { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 10.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--accent-2);
-    margin-bottom: 6px; }
-  .stack-group .v { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
-
-  .rec { display: flex; gap: 10px; padding: 9px 0; border-top: 1px solid var(--hairline);
-    font-size: 12.5px; color: var(--ink-soft); }
-  .rec:first-of-type { border-top: 0; }
-  .rec .mk { color: var(--accent); flex: 0 0 auto; font-weight: 700; }
-  .rec b { color: var(--ink); font-weight: 650; }
-
-  .approach { margin: 0; padding: 0; list-style: none; }
-  .approach li { font-size: 12.5px; color: var(--ink-soft); padding: 7px 0 7px 18px; position: relative;
-    line-height: 1.5; }
-  .approach li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
-  .approach b { color: var(--ink); font-weight: 650; }
+  .stack-group { margin-bottom: 13px; }
+  .stack-group .k { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 10px;
+    text-transform: uppercase; letter-spacing: .14em; color: var(--accent-2); margin-bottom: 5px; }
+  .stack-group .v { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
 
   .services { display: flex; flex-wrap: wrap; gap: 6px; }
   .services span { font-size: 11.5px; color: var(--ink-soft); background: var(--surface);
     border: 1px solid var(--hairline); padding: 4px 9px; border-radius: 6px; }
 
-  .hire { margin-top: 14px; padding: 12px 14px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--accent-soft), transparent);
-    border: 1px solid var(--hairline); font-size: 12.5px; }
-  .hire b { display: block; color: var(--ink); margin-bottom: 2px; }
-  .hire a { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 12px; }
-
-  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--hairline);
+  footer { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--hairline);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 11px; color: var(--ink-faint); }
+    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 11px; color: var(--ink-faint); }
 
   @media (max-width: 720px) {
-    .page { padding: 36px 22px 48px; }
-    header { flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    .grid { grid-template-columns: 1fr; gap: 32px; }
+    .page { padding: 34px 20px 44px; }
+    .nums { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; gap: 28px; }
   }
 
   @media print {
     :root { --ground: #fff; --surface: #f4f7fa; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .page { max-width: none; padding: 0; }
-    body { font-size: 12px; }
-    .proj, .lib, .rec { break-inside: avoid; }
-    .stats { box-shadow: none; }
-    footer { display: none; }
-    .grid { display: block; }
+    body { font-size: 11.5px; }
+    h1 { font-size: 40px; } .punch { font-size: 22px; }
+    .grid { display: block; margin-top: 16px; }
     .col-main, .col-side { display: block; }
-    .col-side { margin-top: 20px; }
-    section { margin-bottom: 18px; }
-    h1 { font-size: 40px; }
-    .tagline { font-size: 12.5px; }
-    .stats { margin: 20px 0 24px; }
-    header { gap: 0; }
-    @page { margin: 13mm; }
+    .col-side { margin-top: 14px; }
+    section { margin-bottom: 13px; }
+    .hook { margin: 16px 0 0; }
+    .proj { padding: 10px 0; }
+    .lib { padding: 7px 0; }
+    .stack-group { margin-bottom: 10px; }
+    h2 { margin-bottom: 11px; }
+    .proj, .lib { break-inside: avoid; }
+    h2, h3 { break-after: avoid; }
+    footer { display: none; }
+    @page { margin: 11mm; }
   }
 </style>
-
+</head>
+<body>
 <div class="page">
+
   <header>
-    <div class="id">
-      <p class="eyebrow">Kotlin Multiplatform · Systems Architecture</p>
-      <h1>Elie Gambache</h1>
-      <p class="role">Open-source library creator &amp; systems architect — <b>Compose ecosystem pioneer</b></p>
-      <p class="tagline">
-        I build the <span class="hl">invisible infrastructure</span> other developers build on:
-        native desktop runtimes, cross-language platform bridges, and the primitives that make
-        Kotlin a first-class citizen on every screen. Creator of <span class="hl">Nucleus</span>,
-        the native desktop platform for the JVM, and 30+ open-source libraries for the
-        Compose Multiplatform ecosystem — trusted by JetBrains, ETH Zürich, and apps with
-        280K+ downloads.
-      </p>
+    <p class="eyebrow">Kotlin Multiplatform · Native Desktop · Compose</p>
+    <h1>Elie Gambache</h1>
+    <p class="punch">I build the <span class="g">native desktop stack the JVM was missing.</span></p>
+    <p class="sub">
+      Creator of <b>Nucleus</b> — the native desktop platform for the JVM — and <b>30+ open-source
+      libraries</b> for the Compose Multiplatform ecosystem. I wrap raw OS APIs in clean Kotlin and
+      bridge Rust, C++ &amp; Go into the JVM, so other developers don't have to.
+    </p>
+    <div class="contact">
+      <span><span class="dot">◆</span> Jerusalem, Israel</span>
+      <a href="mailto:elyahou.hadass@gmail.com">elyahou.hadass@gmail.com</a>
+      <a href="https://eliegambache.kdroidfilter.com">eliegambache.kdroidfilter.com</a>
+      <a href="https://github.com/kdroidFilter">github.com/kdroidFilter</a>
+      <a href="https://nucleusframework.dev">nucleusframework.dev</a>
     </div>
   </header>
 
-  <div class="contact">
-    <span><span class="dot">◆</span> Jerusalem, Israel</span>
-    <a href="mailto:elyahou.hadass@gmail.com">elyahou.hadass@gmail.com</a>
-    <a href="https://eliegambache.kdroidfilter.com">eliegambache.kdroidfilter.com</a>
-    <a href="https://github.com/kdroidFilter">github.com/kdroidFilter</a>
-    <a href="https://nucleusframework.dev">nucleusframework.dev</a>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><div class="n" id="stars" title="Live sum of every non-fork repo — personal + NucleusFramework org">2,938</div><div class="l">Stars · personal + NucleusFramework org</div></div>
-    <div class="stat"><div class="n">149</div><div class="l">Followers</div></div>
-    <div class="stat"><div class="n">#6</div><div class="l">GitHub committer in Israel</div></div>
+  <div class="hook">
+    <div class="nums">
+      <div class="cell"><div class="n" id="stars">2,938</div><div class="c">GitHub stars<br>personal + NucleusFramework org</div></div>
+      <div class="cell"><div class="n">#6</div><div class="c">GitHub committer<br>in Israel · committers.top</div></div>
+      <div class="cell"><div class="n">280K+</div><div class="c">app downloads<br>shipping on my libraries</div></div>
+    </div>
+    <div class="trust">
+      <span class="lbl">Trusted by</span>
+      <span class="chip">JetBrains</span>
+      <span class="chip">ETH Zürich</span>
+      <span class="chip">Pushscroll <small>280K+</small></span>
+      <span class="chip">AB Download Manager <small>12K★</small></span>
+      <span class="chip">Sefaria</span>
+    </div>
   </div>
 
   <div class="grid">
-    <!-- MAIN -->
     <div class="col-main">
-      <section>
-        <h2>Profile</h2>
-        <p style="margin:0;font-size:14px;color:var(--ink-soft);line-height:1.65">
-          Self-directed open-source engineer specializing in Kotlin Multiplatform and Compose
-          Desktop. I work at the layer beneath the application — wrapping raw OS APIs
-          (Win32, AppKit, D-Bus, MediaFoundation, WinRT) in clean Kotlin, bridging Rust, C++,
-          and Go into the JVM through JNI/FFM, and shipping signed, self-updating installers
-          across macOS, Windows, and Linux from a single codebase. My work fills the gaps the
-          ecosystem left open, and it composes: every library is designed to be used with the
-          others.
-        </p>
-      </section>
-
       <section>
         <h2>Flagship Work</h2>
 
         <div class="proj">
           <div class="top">
-            <h3><a class="plink" href="https://github.com/NucleusFramework/Nucleus">Nucleus</a> <span style="color:var(--accent-2);font-size:11px;font-weight:700;vertical-align:middle">— FRAMEWORK</span></h3>
-            <span class="metric"><b>★ 304</b> · v2.0 · Maven Central</span>
+            <h3><a class="plink" href="https://github.com/NucleusFramework/Nucleus">Nucleus</a> <span style="color:var(--accent-2);font-size:11px;font-weight:700">— FRAMEWORK</span></h3>
+            <span class="metric"><b>★ 304</b> · Maven Central</span>
           </div>
           <div class="headline">The native desktop platform for the JVM</div>
-          <p>
-            A Gradle-plugin framework that turns Compose Multiplatform into a complete desktop
-            stack: native window decorations, deep OS integration, code signing, notarization,
-            and native installers — all from one DSL. Runs as a GraalVM native image
-            (~0.5&nbsp;s cold start, 60&nbsp;MB RAM, 38&nbsp;MB binary) or on the JVM with AOT
-            cache. 30+ modules; push a tag → get signed installers in 16 packaging formats.
-            <em>“Electron was the pioneer — Kotlin + Compose + Nucleus is what comes next.”</em>
-          </p>
+          <p>Gradle-plugin framework turning Compose Multiplatform into a full desktop stack — native
+            windows, OS integration, code signing, installers — from one DSL. GraalVM native image
+            (~0.5&nbsp;s cold start, 60&nbsp;MB RAM) or JVM. Push a tag → signed installers in 16 formats.</p>
           <div class="badges">
             <span class="badge">Gradle Plugin</span><span class="badge">GraalVM · JVM</span>
-            <span class="badge">FFM · JNI</span><span class="badge">Decorated Window</span>
-            <span class="badge">Tray · Notifications · Hotkeys</span><span class="badge">Auto-Update</span>
+            <span class="badge">FFM · JNI</span><span class="badge">Tray · Notifications · Hotkeys</span>
+            <span class="badge">Auto-Update</span>
           </div>
         </div>
 
@@ -327,13 +234,9 @@
             <span class="metric"><b>★ 475</b></span>
           </div>
           <div class="headline">The only Compose player on native codecs — no VLC, no MPV</div>
-          <p>
-            Every other JVM media player shells out to an external process. This one talks
-            directly to MediaFoundation (Windows), AVPlayer (macOS/iOS), GStreamer (Linux),
-            ExoPlayer (Android), and the browser player — one <code>@Composable</code>, zero
-            external dependencies, instant launch.
-          </p>
-          <div class="usedby">Supported by <b>JetBrains</b> · used by <b>Pushscroll</b> (280K+ downloads, Google Play &amp; App Store) &amp; AeroDL</div>
+          <p>Talks directly to MediaFoundation, AVPlayer, GStreamer, ExoPlayer &amp; the browser — one
+            <code>@Composable</code>, zero external dependencies.
+            <span class="usedby" style="display:inline">Supported by <b>JetBrains</b> · used by <b>Pushscroll</b> (280K+).</span></p>
         </div>
 
         <div class="proj">
@@ -342,85 +245,58 @@
             <span class="metric"><b>★ 398</b></span>
           </div>
           <div class="headline">A true native system tray — not AWT, not emulated</div>
-          <p>
-            A declarative Compose API over the OS-level system tray, each platform on its own
-            native backend: Go + D-Bus on Linux, C++ on Windows, native APIs on macOS.
-          </p>
-          <div class="usedby">Sponsored by <b>ETH Zürich</b> · used by <b>AB Download Manager</b> (12K★)</div>
+          <p>Declarative Compose API over the OS tray, each platform on its native backend: Go + D-Bus,
+            C++, native macOS.
+            <span class="usedby" style="display:inline">Sponsored by <b>ETH Zürich</b> · used by <b>AB Download Manager</b> (12K★).</span></p>
         </div>
       </section>
 
       <section>
         <h2>Selected Open-Source Libraries</h2>
-        <div class="lib"><span class="name"><a class="plink" href="https://github.com/kdroidFilter/ComposeNativeWebview">ComposeNativeWebview</a></span>
+        <div class="lib">
+          <span class="name"><a class="plink" href="https://github.com/kdroidFilter/ComposeNativeWebview">ComposeNativeWebview</a></span>
           <span class="m">★ 162</span>
           <span class="desc">OS-native WebView (WKWebView / WebView2 / WebKitGTK) via Wry + UniFFI — no Chromium, 90% smaller binaries.</span></div>
-        <div class="lib"><span class="name"><a class="plink" href="https://github.com/NucleusFramework/ComposePdfReader">ComposePdfReader</a></span>
+        <div class="lib">
+          <span class="name"><a class="plink" href="https://github.com/NucleusFramework/ComposePdfReader">ComposePdfReader</a></span>
           <span class="m">★ 59</span>
-          <span class="desc">KMP PDF rendering &amp; text extraction on pdfium — Compose-first API with progressive rendering &amp; selectable text.</span></div>
-        <div class="lib"><span class="name"><a class="plink" href="https://github.com/kdroidFilter/DesktopAccessibilityManager">DesktopAccessibilityManager</a></span>
+          <span class="desc">KMP PDF rendering &amp; text extraction on pdfium — Compose-first, progressive rendering, selectable text.</span></div>
+        <div class="lib">
+          <span class="name"><a class="plink" href="https://github.com/kdroidFilter/DesktopAccessibilityManager">DesktopAccessibilityManager</a></span>
           <span class="m">ETH&nbsp;Zürich</span>
-          <span class="desc">Brings <code>announceForAccessibility()</code> to Compose Desktop via JNA — bridges NVDA, JAWS, VoiceOver.</span></div>
-        <div class="lib"><span class="name"><a class="plink" href="https://github.com/NucleusFramework/AudioKt">AudioKt</a></span>
+          <span class="desc"><code>announceForAccessibility()</code> for Compose Desktop via JNA — bridges NVDA, JAWS, VoiceOver.</span></div>
+        <div class="lib">
+          <span class="name"><a class="plink" href="https://github.com/NucleusFramework/AudioKt">AudioKt</a></span>
           <span class="m">Rust</span>
           <span class="desc">JVM audio engine wrapping Rust’s Rodio — local files, HLS, internet radio with ICY metadata.</span></div>
       </section>
 
       <section>
-        <h2>Applications &amp; Systems</h2>
+        <h2>Applications</h2>
         <div class="proj" style="padding-top:0">
           <div class="top"><h3><a class="plink" href="https://github.com/kdroidFilter/Zayit">Zayit</a></h3><span class="metric">4,200+ downloads</span></div>
           <div class="headline">Semantic search over 7,000+ Jewish texts — fully offline</div>
-          <p>Production KMP app for reading and searching the Jewish textual library: Hebrew-aware
-            tokenization, full-text indexing, citation-aware navigation on SQLite. Powered by Sefaria.</p>
+          <p>Production KMP app: Hebrew-aware tokenization, full-text indexing, citation-aware navigation on SQLite. Powered by Sefaria.</p>
         </div>
       </section>
     </div>
 
-    <!-- SIDEBAR -->
     <div class="col-side">
       <section>
         <h2>Core Stack</h2>
-        <div class="stack-group"><div class="k">Languages</div>
-          <div class="v">Kotlin · Rust · C++ · Go · Python · TypeScript</div></div>
-        <div class="stack-group"><div class="k">Frameworks</div>
-          <div class="v">Compose Multiplatform · KMP · React · Jetpack Compose</div></div>
-        <div class="stack-group"><div class="k">Native bridging</div>
-          <div class="v">JNI · Java FFM · JNA · UniFFI · GraalVM native image</div></div>
-        <div class="stack-group"><div class="k">Platform APIs</div>
-          <div class="v">Win32 / WinRT · AppKit / AVFoundation · D-Bus / freedesktop · MediaFoundation · GStreamer</div></div>
-        <div class="stack-group"><div class="k">Build &amp; delivery</div>
-          <div class="v">Gradle plugin dev · GitHub Actions · code signing · notarization · installers &amp; auto-update</div></div>
-        <div class="stack-group"><div class="k">Domains</div>
-          <div class="v">Android MDM &amp; enterprise · search engines &amp; data pipelines · Hebrew NLP</div></div>
-      </section>
-
-      <section>
-        <h2>Recognition</h2>
-        <div class="rec"><span class="mk">◆</span><div>Open-source support from <b>JetBrains</b> (ComposeMediaPlayer)</div></div>
-        <div class="rec"><span class="mk">◆</span><div>Library work <b>sponsored by ETH Zürich</b> (tray &amp; accessibility)</div></div>
-        <div class="rec"><span class="mk">◆</span><div>Libraries in production apps with <b>280K+ downloads</b></div></div>
-        <div class="rec"><span class="mk">◆</span><div>Adopted by <b>AB Download Manager</b> (12K★)</div></div>
-        <div class="rec"><span class="mk">◆</span><div><b>NucleusFramework</b> org — 818★ across 6 public repos</div></div>
-        <div class="rec"><span class="mk">◆</span><div><b>#6 GitHub committer in Israel</b> (committers.top)</div></div>
-      </section>
-
-      <section>
-        <h2>Engineering Approach</h2>
-        <ul class="approach">
-          <li><b>Infrastructure first.</b> Runtimes and primitives get the same care as features.</li>
-          <li><b>No leaky abstractions.</b> Every API is complete, honest, and hard to misuse.</li>
-          <li><b>Cross-language by design.</b> Right language per layer, one clean Kotlin surface.</li>
-          <li><b>Ecosystem-aware.</b> Libraries are built to compose, evolve, and be replaced.</li>
-        </ul>
+        <div class="stack-group"><div class="k">Languages</div><div class="v">Kotlin · Rust · C++ · Go · Python · TypeScript</div></div>
+        <div class="stack-group"><div class="k">Frameworks</div><div class="v">Compose Multiplatform · KMP · React</div></div>
+        <div class="stack-group"><div class="k">Native bridging</div><div class="v">JNI · Java FFM · JNA · UniFFI · GraalVM native image</div></div>
+        <div class="stack-group"><div class="k">Platform APIs</div><div class="v">Win32 / WinRT · AppKit / AVFoundation · D-Bus · MediaFoundation · GStreamer</div></div>
+        <div class="stack-group"><div class="k">Build &amp; delivery</div><div class="v">Gradle plugins · GitHub Actions · signing · notarization · installers · auto-update</div></div>
+        <div class="stack-group"><div class="k">Domains</div><div class="v">Android MDM &amp; enterprise · search engines · Hebrew NLP</div></div>
       </section>
 
       <section>
         <h2>Freelance &amp; Consulting</h2>
         <div class="services">
-          <span>Systems architecture</span><span>KMP library dev</span>
-          <span>Compose Desktop apps</span><span>Native integration</span>
-          <span>Gradle plugins</span><span>Android MDM</span>
+          <span>Systems architecture</span><span>KMP library dev</span><span>Compose Desktop apps</span>
+          <span>Native integration</span><span>Gradle plugins</span><span>Android MDM</span>
           <span>Search &amp; data pipelines</span><span>Architecture review</span>
         </div>
       </section>
@@ -432,7 +308,6 @@
     <span>github.com/kdroidFilter · nucleusframework.dev</span>
   </footer>
 </div>
-
 
 <script>
 (async () => {
