@@ -265,7 +265,7 @@
 
   <div class="stats">
     <div class="stat"><div class="n">82</div><div class="l">Public repositories</div></div>
-    <div class="stat"><div class="n">2,900+</div><div class="l">Stars · personal + NucleusFramework org</div></div>
+    <div class="stat"><div class="n" id="stars" title="Live sum of every non-fork repo — personal + NucleusFramework org">2,938</div><div class="l">Stars · personal + NucleusFramework org</div></div>
     <div class="stat"><div class="n">149</div><div class="l">Followers</div></div>
     <div class="stat"><div class="n">Top&nbsp;⟨IL⟩</div><div class="l">GitHub committers, Israel</div></div>
   </div>
@@ -438,5 +438,19 @@
   </footer>
 </div>
 
+
+<script>
+(async () => {
+  const el = document.getElementById('stars');
+  const sum = rs => rs.filter(r => !r.fork).reduce((n, r) => n + (r.stargazers_count || 0), 0);
+  try {
+    const [u, o] = await Promise.all([
+      fetch('https://api.github.com/users/kdroidFilter/repos?per_page=100&type=owner').then(r => r.json()),
+      fetch('https://api.github.com/orgs/NucleusFramework/repos?per_page=100').then(r => r.json())
+    ]);
+    if (Array.isArray(u) && Array.isArray(o)) el.textContent = (sum(u) + sum(o)).toLocaleString('en-US');
+  } catch (_) { /* keep static fallback */ }
+})();
+</script>
 </body>
 </html>
