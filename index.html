@@ -232,13 +232,21 @@
 
   @media print {
     :root { --ground: #fff; --surface: #f4f7fa; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     .page { max-width: none; padding: 0; }
     body { font-size: 12px; }
     .proj, .lib, .rec { break-inside: avoid; }
-    section { break-inside: avoid-page; }
     .stats { box-shadow: none; }
     footer { display: none; }
-    @page { margin: 14mm; }
+    .grid { display: block; }
+    .col-main, .col-side { display: block; }
+    .col-side { margin-top: 20px; }
+    section { margin-bottom: 18px; }
+    h1 { font-size: 40px; }
+    .tagline { font-size: 12.5px; }
+    .stats { margin: 20px 0 24px; }
+    header { gap: 0; }
+    @page { margin: 13mm; }
   }
 </style>
 
